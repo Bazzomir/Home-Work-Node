@@ -1,0 +1,18 @@
+<!-- Include the code that we have extracted out of this file to partials/header (repeating code) -->
+<%- include('../partials/header') %>
+<h3>Delete user with name <%= employee.first_name + ' ' + employee.last_name %></h3>
+<form action="/employees/delete/<%= employee._id %>" method="post" class="mt-5" style="width: 500px; margin: 0 auto;">
+  <!-- <span><h1>Are you sure?</h1></span>
+  <button type="submit" class="btn btn-danger mt-1" >Delete</button> -->
+  <div class="container">
+    <h1>Delete Account</h1>
+    <p>Are you sure you want to delete your account?</p>
+
+    <div class="clearfix">
+      <!-- <a type="button" class="cancelbtn">No</a> -->
+      <a href="/employees" class="btn btn-warning" >No!</a>
+      <button type="submit" class="btn btn-danger mt-1">Yes</button>
+    </div>
+</form>
+<!-- Include the code that we have extracted out of this file to partials/footer (repeating code) -->
+<%- include('../partials/footer') %>
